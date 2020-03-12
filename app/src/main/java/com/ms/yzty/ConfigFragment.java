@@ -15,8 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.bigkoo.pickerview.TimePickerView;
@@ -27,11 +25,8 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class ConfigFragment extends Fragment {
-    private Button timeGetBtn;
-    private Button timeSetBtn;
-    private Button configGetBtn;
-    private Button configSetBtn;
+    class ConfigFragment extends Fragment {
+
     private EditText timeEdit;
     private TimePickerView timePick;
     private MyApplication myApp;
@@ -49,7 +44,7 @@ public class ConfigFragment extends Fragment {
     private EditText trTh;
     private EditText trDelay;
     private EditText alarmTempTh;
-    private EditText tranCapa;
+    private EditText tranCapacity;
     private EditText deviceCode;
     private Activity mActivity;
 
@@ -71,8 +66,8 @@ public class ConfigFragment extends Fragment {
         trTh         = view.findViewById(R.id.editText_tr_th);
         trDelay      = view.findViewById(R.id.editText_tr_delay);
         alarmTempTh  = view.findViewById(R.id.editText_alarm_temp_th);
-        tranCapa     = view.findViewById(R.id.editText_tran_cap);
-        deviceCode   = view.findViewById(R.id.editText_deivce_code);
+        tranCapacity     = view.findViewById(R.id.editText_tran_cap);
+        deviceCode   = view.findViewById(R.id.editText_device_code);
         myApp = (MyApplication)mActivity.getApplication();
 
         timeEdit = view.findViewById(R.id.editText_time);
@@ -91,6 +86,10 @@ public class ConfigFragment extends Fragment {
                 timeEdit.setText(getTime(date));
             }
         }).build();
+        Button timeGetBtn;
+        Button timeSetBtn;
+        Button configGetBtn;
+        Button configSetBtn;
         timeGetBtn = view.findViewById(R.id.button_time_get);
         timeGetBtn.setOnClickListener(new Button.OnClickListener()
         {
@@ -247,7 +246,7 @@ public class ConfigFragment extends Fragment {
                 }
                 configData[24] = (byte)(Integer.parseInt(s) >> 8);
                 configData[25] = (byte)(Integer.parseInt(s) & 0xFF);
-                s = tranCapa.getText().toString();
+                s = tranCapacity.getText().toString();
                 if (TextUtils.isEmpty(s)|| numberStat(s))
                 {
                     Toast.makeText(mActivity, "变压器容量参数不能为空，或者参数中有非法字符", Toast.LENGTH_SHORT).show();
@@ -379,7 +378,7 @@ public class ConfigFragment extends Fragment {
                 else
                     b = buf[33];
                 s = (a*256 + b) + "";
-                tranCapa.setText(s);
+                tranCapacity.setText(s);
 
                 a = buf[34];
                 if(buf[35] < 0)

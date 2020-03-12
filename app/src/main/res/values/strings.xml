@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">yzty</string>
+    <string name="app_name">有载调压</string>
 
-    <string name="textView_select_trty">请选择变压器类型</string>
+    <string name="textView_select_tr_ty">请选择变压器类型</string>
     <string name="radioButton_ty">调压</string>
-    <string name="radioButton_trty">调容调压</string>
+    <string name="radioButton_tr_ty">调容调压</string>
     <string name="editText_hint_ip">请输入IP</string>
     <string name="editText_hint_port">请输入端口</string>
     <string name="editText_hint_pwd">请输入密码</string>
@@ -25,8 +25,8 @@
     <string name="item_control">开关控制</string>
     <string name="item_config">参数配置</string>
 
-    <string name="textView_memery_gear_label">记忆档位:</string>
-    <string name="textView_memery_gear"> </string>
+    <string name="textView_memory_gear_label">记忆档位:</string>
+    <string name="textView_memory_gear"> </string>
     <string name="textView_mode_label">工作模式:</string>
     <string name="textView_mode"> </string>
     <string name="textView_ty_num_label">开关动作次数:</string>
@@ -82,7 +82,6 @@
 
 
     <string name="textView_device_time_label">时间:</string>
-    <string name="editText_time"> </string>
     <string name="editText_hint_time"> </string>
     <string name="button_get">获取</string>
     <string name="button_set">配置</string>
@@ -134,25 +133,11 @@
     <string name="editText_device_code"> </string>
     <string name="editText_hint_device_code">小于65535</string>
 
-    <string name="textView_tap_num_label">总档数:</string>
-    <string name="textView_tap_num"> </string>
-    <string name="textView_tap_h_label">调压幅度上限:</string>
-    <string name="textView_tap_h"> </string>
-    <string name="textView_tap_l_label">调压幅度下限:</string>
-    <string name="textView_tap_l"> </string>
-    <string name="textView_hard_v_label">硬件版本:</string>
-    <string name="textView_hard_v"> </string>
-    <string name="textView_soft_v_label">软件版本:</string>
-    <string name="textView_soft_v"> </string>
-    <string name="textView_switch_type_label">开关类型:</string>
-    <string name="textView_switch_type"> </string>
-
-
     <string name="textView_switch_mode_label">模式切换</string>
     <string name="textView_switch_control_label">开关控制</string>
 
     <string name="radioButton_mode_auto">自动模式</string>
-    <string name="radioButton_mode_tele">遥控模式</string>
+    <string name="radioButton_mode_remote">遥控模式</string>
     <string name="button_switch_mode">切换</string>
 
     <string name="radioButton_ty_up">升压</string>

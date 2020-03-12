@@ -5,18 +5,15 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
-import android.view.KeyEvent;
+
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,20 +40,19 @@ public class MainActivity extends AppCompatActivity {
     private ControlFragment controlFrag;
     private ConfigFragment configFrag;
     private Fragment[] fragments;
-    private int lastFragment;
-    private BottomNavigationView bnv;
+
     private ExecutorService mThreadPool;
-    public Handler mHandler;
-    private int lastfragment;
+    private Handler mHandler;
+    private int lastFragment;
     private TextView capacityLabel;
     private TextView capacity;
-    public Socket socket;
-    public InputStream inputStream;
-    public OutputStream outputStream;
-    public byte[] readData;
-    public int readCount;
-    public int deviceId;
-    public int revLength;
+    private Socket socket;
+    private InputStream inputStream;
+    private OutputStream outputStream;
+    private byte[] readData;
+    private int readCount;
+    private int deviceId;
+    private int revLength;
     private long heartTimeout;
     private int sendDataType;
     private int periodCount;
@@ -85,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         revLength = 0;
         sendDataType = 0x10;
         myApp.setSendDataType(sendDataType);
+        int lastFragment;
+        BottomNavigationView bnv;
         lastFragment = 0;
         periodCount = 0;
         myApp.setLastFragment(lastFragment);
@@ -95,13 +93,13 @@ public class MainActivity extends AppCompatActivity {
         fragments = new Fragment[]{monitorFrag,telemeterFrag,controlFrag,configFrag};
         bnv = findViewById(R.id.bnv);
         bnv.setLabelVisibilityMode(1);
-        getSupportFragmentManager().beginTransaction().replace(R.id.mainview,monitorFrag).show(monitorFrag).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainView,monitorFrag).show(monitorFrag).commit();
         bnv.setOnNavigationItemSelectedListener(changeFragment);
         initTop(tranType);
         initHandler();
         // 初始化线程池
         mThreadPool = Executors.newCachedThreadPool();
-        reciveData();
+        receiveData();
         sendData();
     }
     private void initTop(int type)
@@ -117,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             capacityLabel.setVisibility(View.VISIBLE);
         }
     }
+    @SuppressWarnings("CanBeFinal")
     private BottomNavigationView.OnNavigationItemSelectedListener changeFragment=
             new BottomNavigationView.OnNavigationItemSelectedListener()
             {
@@ -127,40 +126,40 @@ public class MainActivity extends AppCompatActivity {
                             if(myApp.getLastFragment()!=0)
                             {
                                 switchFragment(myApp.getLastFragment(),0);
-                                lastfragment=0;
+                                lastFragment=0;
                                 sendDataType = 0x10;
                                 myApp.setSendDataType(sendDataType);
-                                myApp.setLastFragment(lastfragment);
+                                myApp.setLastFragment(lastFragment);
                             }
                             return true;
                         case R.id.item_telemeter:
                             if(myApp.getLastFragment()!=1)
                             {
                                 switchFragment(myApp.getLastFragment(),1);
-                                lastfragment=1;
+                                lastFragment=1;
                                 sendDataType = 0x16;
                                 myApp.setSendDataType(sendDataType);
-                                myApp.setLastFragment(lastfragment);
+                                myApp.setLastFragment(lastFragment);
                             }
                             return true;
                         case R.id.item_control:
                             if(myApp.getLastFragment()!=2)
                             {
                                 switchFragment(myApp.getLastFragment(),2);
-                                lastfragment=2;
+                                lastFragment=2;
                                 sendDataType = 0x10;   //转到此页面默认只发送心跳
                                 myApp.setSendDataType(sendDataType);
-                                myApp.setLastFragment(lastfragment);
+                                myApp.setLastFragment(lastFragment);
                             }
                             return true;
                         case R.id.item_config:
                             if(myApp.getLastFragment()!=3)
                             {
                                 switchFragment(myApp.getLastFragment(),3);
-                                lastfragment=3;
+                                lastFragment=3;
                                 sendDataType = 0x10; //转到此页面默认只发送心跳
                                 myApp.setSendDataType(sendDataType);
-                                myApp.setLastFragment(lastfragment);
+                                myApp.setLastFragment(lastFragment);
                             }
                             return true;
                     }
@@ -174,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.hide(fragments[last]);//隐藏上个Fragment
         if(!fragments[index].isAdded())
         {
-            transaction.add(R.id.mainview,fragments[index]);
+            transaction.add(R.id.mainView,fragments[index]);
         }
         transaction.show(fragments[index]).commitAllowingStateLoss();
     }
@@ -197,11 +196,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                     case 4:
-                        if(lastfragment == 3)
+                        if(lastFragment == 3)
                             configFrag.setData(readData);
                         break;
                     case 5:
-                        if(lastfragment == 2)
+                        if(lastFragment == 2)
                             controlFrag.setData(readData);
                         break;
                     default:
@@ -234,9 +233,9 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void revDataHandleTelemeter()
+    private void revDataHandleTelemeter()
     {
-        if(lastfragment == 1)
+        if(lastFragment == 1)
         {
             telemeterFrag.setData(readData);
         }
@@ -254,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private void reciveData() {
+    private void receiveData() {
         mThreadPool.execute(new Runnable() {
             @Override
             public void run() {
@@ -297,7 +296,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void dataParse(byte[] buf, int len )
+    private void dataParse(byte[] buf, int len )
     {
         int i;
         for(i = 0; i < len; i++)
@@ -343,7 +342,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    public  void revDataHandle()
+    private  void revDataHandle()
     {
         int j;
         int calCrc16,revCrc16,temp1,temp2;
@@ -424,7 +423,7 @@ public class MainActivity extends AppCompatActivity {
         readCount = 0;
         revLength = 0;
     }
-    public void revDataHandleHeart()
+    private void revDataHandleHeart()
     {
         TextView curGear = findViewById(R.id.textView_gear);
         String s = readData[6] + "";
@@ -442,12 +441,12 @@ public class MainActivity extends AppCompatActivity {
             else if(readData[19] == 1)
                 curCap.setText("小");
         }
-        if(lastfragment == 0)
+        if(lastFragment == 0)
         {
             monitorFrag.setData(readData);
         }
     }
-    public void revDataHandleErr(int errCode)
+    private void revDataHandleErr(int errCode)
     {
         Message msg = Message.obtain();
         msg.what = 0;
@@ -565,7 +564,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    public void sendMotionConfirm()
+    private void sendMotionConfirm()
     {
         System.out.println("send motion confirm");
         byte[] writeData = new byte[1024];
@@ -596,7 +595,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendMotionControl()
+    private void sendMotionControl()
     {
         System.out.println("send motion control");
         byte[] writeData = new byte[1024];
@@ -627,7 +626,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendModeControl()
+    private void sendModeControl()
     {
         System.out.println("send mode control");
         byte[] writeData = new byte[1024];
@@ -658,7 +657,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendSetConfig()
+    private void sendSetConfig()
     {
         System.out.println("send set config");
         byte[] writeData = new byte[1024];
@@ -689,7 +688,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendGetConfig()
+    private void sendGetConfig()
     {
         System.out.println("send get config");
         byte[] writeData = new byte[1024];
@@ -717,7 +716,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendSetTime()
+    private void sendSetTime()
     {
         System.out.println("send get time");
         byte[] writeData = new byte[64];
@@ -751,7 +750,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendGetTime()
+    private void sendGetTime()
     {
         System.out.println("send get time");
         byte[] writeData = new byte[1024];
@@ -778,7 +777,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public void sendHeart()
+    private void sendHeart()
     {
         System.out.println("send heart  start");
         byte[] writeData = new byte[1024];
@@ -805,7 +804,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    public int getCRC16(byte[] data,int length)
+    private int getCRC16(byte[] data,int length)
     {
         int regCrc=0xffff;
         int temp;

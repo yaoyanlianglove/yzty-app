@@ -151,7 +151,7 @@
             style="@style/textViewLabelStyle"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@string/textView_phase_ia_label" />
+            android:text="@string/textView_phase_ic_label" />
 
         <TextView
             android:id="@+id/textView_phase_ic"
@@ -390,7 +390,7 @@
             android:text="@string/textView_device_temp_label" />
 
         <TextView
-            android:id="@+id/textView_deive_tmp"
+            android:id="@+id/textView_device_tmp"
             style="@style/textViewStyle"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
@@ -425,7 +425,7 @@
             android:text="@string/textView_oil_temp" />
 
         <TextView
-            android:id="@+id/textView_unit_oiltmp"
+            android:id="@+id/textView_unit_oil_tmp"
             style="@style/textViewStyle"
             android:layout_width="30dp"
             android:layout_height="wrap_content"

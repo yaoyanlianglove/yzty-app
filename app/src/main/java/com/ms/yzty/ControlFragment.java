@@ -18,13 +18,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-
-public class ControlFragment extends Fragment {
+class ControlFragment extends Fragment {
     private RadioGroup modeSelect;
     private RadioGroup controlSelect;
-    private RadioButton trBtn;
-    private Button modeBtn;
-    private Button controlBtn;
+
     private MyApplication myApp;
     private Activity mActivity;
     @Nullable
@@ -34,6 +31,9 @@ public class ControlFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_control,container,false);
         modeSelect=view.findViewById(R.id.radioGroup_mode);
         controlSelect =view.findViewById(R.id.radioGroup_control);
+        RadioButton trBtn;
+        Button modeBtn;
+        Button controlBtn;
         modeBtn = view.findViewById(R.id.button_switch_mode);
         controlBtn = view.findViewById(R.id.button_select);
         myApp = (MyApplication)mActivity.getApplication();
@@ -58,7 +58,7 @@ public class ControlFragment extends Fragment {
                     myApp.setSendByte(controlData);
                     myApp.setSendDataType(0x20);
                 }
-                else if(modeSelect.getCheckedRadioButtonId() == R.id.radioButton_mode_tele)
+                else if(modeSelect.getCheckedRadioButtonId() == R.id.radioButton_mode_remote)
                 {
                     controlData[0] = 0x01;
                     myApp.setSendByte(controlData);

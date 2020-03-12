@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 
-public class TelemeterFragment extends Fragment {
+class TelemeterFragment extends Fragment {
     private TextView textViewPhaseVa;
     private TextView textViewPhaseVb;
     private TextView textViewPhaseVc;
@@ -52,7 +52,7 @@ public class TelemeterFragment extends Fragment {
         textViewPhaseQc=view.findViewById(R.id.textView_phase_qc);
         textViewPf     =view.findViewById(R.id.textView_pf);
         textViewFreq   =view.findViewById(R.id.textView_freq);
-        textViewDeviceTemp=view.findViewById(R.id.textView_deive_tmp);
+        textViewDeviceTemp=view.findViewById(R.id.textView_device_tmp);
         textViewOilTemp   =view.findViewById(R.id.textView_oil_temp);
         return view;
     }

@@ -16,10 +16,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView_select_trty"
+            android:id="@+id/textView_select_tr_ty"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/textView_select_trty" />
+            android:text="@string/textView_select_tr_ty" />
 
         <RadioGroup
             android:id="@+id/RadioGroup_select"
@@ -34,10 +34,10 @@
                 android:text="@string/radioButton_ty" />
 
             <RadioButton
-                android:id="@+id/radioButton_trty"
+                android:id="@+id/radioButton_tr_ty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/radioButton_trty" />
+                android:text="@string/radioButton_tr_ty" />
         </RadioGroup>
 
         <EditText

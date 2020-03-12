@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/topview"
+        android:id="@+id/topView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
@@ -79,14 +79,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/mainview"
+        android:id="@+id/mainView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topview">
+        app:layout_constraintTop_toBottomOf="@+id/topView">
 
     </LinearLayout>
 

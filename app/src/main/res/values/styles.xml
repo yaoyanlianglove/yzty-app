@@ -21,13 +21,6 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_marginLeft">15dp</item>
     </style>
-    <style name="textViewStyle_config">
-        <item name="android:textSize">15sp</item>
-        <item name="android:color">#070505</item>
-        <item name="android:alpha">1</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_marginLeft">15dp</item>
-    </style>
     <style name="textViewStyle">
         <item name="android:textSize">15sp</item>
         <item name="android:color">#070505</item>

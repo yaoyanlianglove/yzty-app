@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    public void closeTCP()
+    private void closeTCP()
     {
         try
         {

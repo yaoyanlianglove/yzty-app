@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/lay_memery_gear"
+        android:id="@+id/lay_memory_gear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -16,14 +16,14 @@
             style="@style/textViewLabelStyle"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="@string/textView_memery_gear_label" />
+            android:text="@string/textView_memory_gear_label" />
 
         <TextView
-            android:id="@+id/textView_memery_gear"
+            android:id="@+id/textView_memory_gear"
             style="@style/textViewStyle"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:text="@string/textView_memery_gear" />
+            android:text="@string/textView_memory_gear" />
     </LinearLayout>
 
     <LinearLayout

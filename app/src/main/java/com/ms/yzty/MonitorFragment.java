@@ -1,10 +1,9 @@
 package com.ms.yzty;
 
-import android.app.Activity;
-import android.content.Context;
+
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -13,19 +12,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+class MonitorFragment extends Fragment {
 
-public class MonitorFragment extends Fragment {
-    private TextView textViewMemeryGear;
     private TextView textViewTyNum;
     private TextView textViewAlarmNum;
     private TextView textViewRebootNum;
     private TextView textViewDeviceStat;
+    private TextView textViewMemoryGear;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         View view=inflater.inflate(R.layout.fragment_monitor,container,false);
-        textViewMemeryGear = view.findViewById(R.id.textView_memery_gear);
+
+        textViewMemoryGear = view.findViewById(R.id.textView_memory_gear);
         textViewTyNum = view.findViewById(R.id.textView_ty_num);
         textViewAlarmNum = view.findViewById(R.id.textView_alarm_num);
         textViewRebootNum = view.findViewById(R.id.textView_reboot_num);
@@ -35,7 +35,7 @@ public class MonitorFragment extends Fragment {
 
         void setData(byte[] buf) {
         String  s= buf[18] + "";
-        textViewMemeryGear.setText(s);
+        textViewMemoryGear.setText(s);
         int a,b,c,d;
         if(buf[8] < 0)
             a = buf[8] + 256;
