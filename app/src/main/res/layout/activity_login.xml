@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:id="@+id/LinearLayout_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_select_trty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/textView_select_trty" />
+
+        <RadioGroup
+            android:id="@+id/RadioGroup_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/radioButton_ty">
+
+            <RadioButton
+                android:id="@+id/radioButton_ty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_ty" />
+
+            <RadioButton
+                android:id="@+id/radioButton_trty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_trty" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/editText_hint_ip"
+            android:inputType="textPersonName"
+            android:text="@string/editText_ip"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/editText_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/editText_hint_port"
+            android:inputType="textPersonName"
+            android:text="@string/editText_port"
+            tools:targetApi="o" />
+
+        <EditText
+            android:id="@+id/editText_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/editText_hint_pwd"
+            android:inputType="textPassword"
+            android:text="@string/editText_pwd"
+            tools:targetApi="o" />
+
+        <Button
+            android:id="@+id/button_login_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/button_login_in" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

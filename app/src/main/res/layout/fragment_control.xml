@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_control_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_switch_mode_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_switch_mode_label" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton_mode_auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_mode_auto" />
+
+            <RadioButton
+                android:id="@+id/radioButton_mode_tele"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_mode_tele" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_switch_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/button_switch_mode" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_switch_control_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_switch_control_label" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButton_tr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_tr" />
+
+            <RadioButton
+                android:id="@+id/radioButton_ty_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_ty_down" />
+
+            <RadioButton
+                android:id="@+id/radioButton_ty_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/radioButton_ty_up" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/button_select" />
+
+    </LinearLayout>
+</LinearLayout>
+
+

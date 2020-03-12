@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="textViewLabelStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:color">#070505</item>
+        <item name="android:alpha">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+    <style name="textViewLabelStyle_config">
+        <item name="android:textSize">15sp</item>
+        <item name="android:color">#070505</item>
+        <item name="android:alpha">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+    <style name="textViewStyle_config">
+        <item name="android:textSize">15sp</item>
+        <item name="android:color">#070505</item>
+        <item name="android:alpha">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+    <style name="textViewStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:color">#070505</item>
+        <item name="android:alpha">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+
+
+</resources>

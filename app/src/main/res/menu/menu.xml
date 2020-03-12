@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_monitor"
+        android:icon="@drawable/ic_monitor_black_24dp"
+        android:title="@string/item_monitor" />
+    <item
+        android:id="@+id/item_telemeter"
+        android:icon="@drawable/ic_telemeter_black_24dp"
+        android:title="@string/item_telemeter" />
+    <item
+        android:id="@+id/item_control"
+        android:icon="@drawable/ic_control_black_24dp"
+        android:title="@string/item_control" />
+    <item
+        android:id="@+id/item_config"
+        android:icon="@drawable/ic_config_black_24dp"
+        android:title="@string/item_config" />
+</menu>

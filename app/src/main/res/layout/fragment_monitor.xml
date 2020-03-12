@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_monitor_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_memery_gear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_device_time_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_memery_gear_label" />
+
+        <TextView
+            android:id="@+id/textView_memery_gear"
+            style="@style/textViewStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_memery_gear" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_ty_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_ty_num_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_ty_num_label" />
+
+        <TextView
+            android:id="@+id/textView_ty_num"
+            style="@style/textViewStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_ty_num" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_alarm_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_alarm_num_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_alarm_num_label" />
+
+        <TextView
+            android:id="@+id/textView_alarm_num"
+            style="@style/textViewStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_alarm_num" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_reboot_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_reboot_num_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_reboot_num_label" />
+
+        <TextView
+            android:id="@+id/textView_reboot_num"
+            style="@style/textViewStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_reboot_num" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_device_stat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_device_stat_label"
+            style="@style/textViewLabelStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_device_stat_label" />
+
+        <TextView
+            android:id="@+id/textView_device_stat"
+            style="@style/textViewStyle"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/textView_device_stat" />
+    </LinearLayout>
+
+
+</LinearLayout>
