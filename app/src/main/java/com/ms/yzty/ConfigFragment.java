@@ -389,8 +389,40 @@ public class ConfigFragment extends Fragment {
                 break;
  
             case 0x22:
-                s = buf[7] + "-" + buf[9] + "-" +buf[11] +
-                        " "  +buf[13] + ":" +buf[15] + ":" +buf[17];
+                int a1,a2,a3,a4,a5,a6;
+                if(buf[7] < 0)
+                    a1 = buf[7] + 256;
+                else
+                    a1 = buf[7];
+
+                if(buf[9] < 0)
+                    a2 = buf[9] + 256;
+                else
+                    a2 = buf[9];
+
+                if(buf[11] < 0)
+                    a3 = buf[11] + 256;
+                else
+                    a3 = buf[11];
+
+                if(buf[13] < 0)
+                    a4= buf[13] + 256;
+                else
+                    a4 = buf[13];
+
+                if(buf[15] < 0)
+                    a5 = buf[15] + 256;
+                else
+                    a5 = buf[15];
+
+                if(buf[17] < 0)
+                    a6 = buf[17] + 256;
+                else
+                    a6 = buf[17];
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(a1,a2,a3,a4,a5,a6);
+                SimpleDateFormat sdf = new SimpleDateFormat("yy-MM-dd HH:mm:ss", Locale.ENGLISH);
+                s=sdf.format(calendar.getTime());
                 timeEdit.setText(s);
                 break;
         }
