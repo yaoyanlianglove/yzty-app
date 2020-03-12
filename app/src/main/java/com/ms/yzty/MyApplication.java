@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 
-class MyApplication extends Application {
+public class MyApplication extends Application {
     private String ip;
     private int port;
     private int isTyTr;

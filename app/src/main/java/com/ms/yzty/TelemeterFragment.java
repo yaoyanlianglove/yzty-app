@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 
-class TelemeterFragment extends Fragment {
+public class TelemeterFragment extends Fragment {
     private TextView textViewPhaseVa;
     private TextView textViewPhaseVb;
     private TextView textViewPhaseVc;

@@ -18,7 +18,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-class ControlFragment extends Fragment {
+public class ControlFragment extends Fragment {
     private RadioGroup modeSelect;
     private RadioGroup controlSelect;
 

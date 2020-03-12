@@ -24,8 +24,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-
-    class ConfigFragment extends Fragment {
+public class ConfigFragment extends Fragment {
 
     private EditText timeEdit;
     private TimePickerView timePick;

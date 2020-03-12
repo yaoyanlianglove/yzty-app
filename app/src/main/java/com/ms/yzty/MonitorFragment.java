@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-class MonitorFragment extends Fragment {
+public class MonitorFragment extends Fragment {
 
     private TextView textViewTyNum;
     private TextView textViewAlarmNum;
