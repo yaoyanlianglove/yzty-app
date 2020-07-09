@@ -95,7 +95,7 @@
     <string name="editText_hint_down_th">198~225</string>
     <string name="textView_motion_space_label">动作间隔：</string>
     <string name="editText_motion_space"> </string>
-    <string name="editText_hint_motion_space">10~3600</string>
+    <string name="editText_hint_motion_space">5~3600</string>
     <string name="textView_ty_delay_label">调压延时：</string>
     <string name="editText_ty_delay"> </string>
     <string name="editText_hint_ty_delay">5~1200</string>

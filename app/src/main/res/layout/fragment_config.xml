@@ -99,37 +99,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView_up_th_label"
-                    style="@style/textViewLabelStyle_config"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textView_up_th_label" />
-
-                <EditText
-                    android:id="@+id/editText_up_th"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:autofillHints=""
-                    android:ems="10"
-                    android:hint="@string/editText_hint_up_th"
-                    android:inputType="textPersonName"
-                    android:text="@string/editText_up_th"
-                    tools:targetApi="o" />
-
-                <TextView
-                    style="@style/textViewLabelStyle_config"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textView_unit_v" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
                     android:id="@+id/textView_down_th_label"
                     style="@style/textViewLabelStyle_config"
                     android:layout_width="120dp"
@@ -146,6 +115,37 @@
                     android:hint="@string/editText_hint_down_th"
                     android:inputType="textPersonName"
                     android:text="@string/editText_down_th"
+                    tools:targetApi="o" />
+
+                <TextView
+                    style="@style/textViewLabelStyle_config"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textView_unit_v" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_up_th_label"
+                    style="@style/textViewLabelStyle_config"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textView_up_th_label" />
+
+                <EditText
+                    android:id="@+id/editText_up_th"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/editText_hint_up_th"
+                    android:inputType="textPersonName"
+                    android:text="@string/editText_up_th"
                     tools:targetApi="o" />
 
                 <TextView

@@ -285,14 +285,14 @@ public class ConfigFragment extends Fragment {
                 else
                     b = buf[7];
                 s = (a*256 + b) + "";
-                upTh.setText(s);
+                downTh.setText(s);
                 a = buf[8];
                 if(buf[9] < 0)
                     b = buf[9] + 256;
                 else
                     b = buf[9];
                 s = (a*256 + b) + "";
-                downTh.setText(s);
+                upTh.setText(s);
                 a = buf[10];
                 if(buf[11] < 0)
                     b = buf[11] + 256;
