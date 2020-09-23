@@ -89,10 +89,10 @@
 
     <string name="textView_up_th_label">升压阈值：</string>
     <string name="editText_up_th"> </string>
-    <string name="editText_hint_up_th">225~240</string>
+    <string name="editText_hint_up_th">198~225</string>
     <string name="textView_down_th_label">降压阈值：</string>
     <string name="editText_down_th"> </string>
-    <string name="editText_hint_down_th">198~225</string>
+    <string name="editText_hint_down_th">225~240</string>
     <string name="textView_motion_space_label">动作间隔：</string>
     <string name="editText_motion_space"> </string>
     <string name="editText_hint_motion_space">5~3600</string>
