@@ -140,7 +140,7 @@ public class ConfigFragment extends Fragment {
             {
 
                 byte[] configData = new byte[64];
-                String s = upTh.getText().toString();
+                String s = downTh.getText().toString();
                 if (TextUtils.isEmpty(s) || numberStat(s))
                 {
                     Toast.makeText(mActivity, "降压阈值参数不能为空，或者参数中有非法字符", Toast.LENGTH_SHORT).show();
@@ -148,7 +148,7 @@ public class ConfigFragment extends Fragment {
                 }
                 configData[0] = (byte)(Integer.parseInt(s) >> 8);
                 configData[1] = (byte)(Integer.parseInt(s) & 0xFF);
-                s = downTh.getText().toString();
+                s = upTh.getText().toString();
                 if (TextUtils.isEmpty(s)|| numberStat(s))
                 {
                     Toast.makeText(mActivity, "升压阈值参数不能为空，或者参数中有非法字符", Toast.LENGTH_SHORT).show();
