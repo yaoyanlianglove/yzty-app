@@ -96,7 +96,7 @@ public class ControlFragment extends Fragment {
                 }
                 else
                 {
-                    Toast.makeText(mActivity, "请选择一个模式", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mActivity, "请选择一个动作", Toast.LENGTH_SHORT).show();
                 }
             }
         });
